@@ -1,0 +1,12 @@
+fllow this link      https://www.dhiwise.com/post/react-pass-component-as-prop-guide-to-component-composition
+
+React Components and Props
+--------------------------
+React components are the building blocks of any React application. They come in two flavors: function components 
+and class components. Function components are simpler and more suited for components that do not require state 
+management or lifecycle methods. On the other hand, class components offer more features but are slightly more 
+complex.
+
+Props, short for properties, are the mechanism by which React components communicate with each other. They are 
+read-only and allow the passing of data from parent components to child components. Props can include simple data 
+like strings and numbers, but they can also include functions and even other components.
