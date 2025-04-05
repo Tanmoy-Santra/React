@@ -1,0 +1,45 @@
+body{
+  background-color: black;
+  color: white;
+}
+.container{
+  margin: auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: auto;
+  width: fit-content;
+  padding: 5px;
+  border: 2px solid white;
+  
+}
+
+.form{  
+  margin: 5px;
+  display: block;  
+}
+.form-element{
+  margin: auto;
+  padding: 3px;
+  display: block;
+  align-items: center;
+}
+.form-element input{
+  margin: 6px;
+  width: 200px;
+  
+}
+.form-element textarea{
+  margin: 6px;
+  
+}
+.nav-element{
+  margin: 10px;  
+}
+.btn{
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid wheat;
+  color: wheat;  
+  margin-right: 10px;
+}
