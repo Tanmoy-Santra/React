@@ -15,7 +15,7 @@ const Navbar = () => {
       {/* Desktop Links */}
       <div className="hidden md:flex space-x-6 text-gray-700 font-medium">
         <Link to="/home" className="hover:text-blue-500">Home</Link>
-        <Link to="/notes" className="hover:text-blue-500">Notes</Link>
+        <Link to="/notes" className="hover:text-blue-500">Create</Link>
       </div>
 
       {/* Hamburger Icon */}

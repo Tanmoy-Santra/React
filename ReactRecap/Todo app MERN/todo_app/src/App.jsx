@@ -2,6 +2,8 @@ import Todo from "./components/Todo"
 import Home from "./components/Home"
 import { BrowserRouter,Router,Route,Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import { ToastContainer } from 'react-toastify';
+
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
           <Route path="/notes" element={<Todo></Todo>}/>
         </Routes>
       </BrowserRouter>
-      
+      <ToastContainer></ToastContainer>      
     </div>
   )
 }

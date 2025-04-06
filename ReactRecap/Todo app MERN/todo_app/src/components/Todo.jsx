@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Todo = () => {
     const [data,setData]=useState([]);
@@ -16,17 +18,29 @@ const Todo = () => {
     
 
 
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-        if(formData.title && formData.description){        
-        setData(data);
-        setFormdata({
-            title:'',
-            description:''
-        });
-    }
-
-    }
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      if (formData.title && formData.description) {
+        try {
+          const response = await axios.post('http://localhost:5000/api/todos', formData);
+          console.log("Todo added:", response.data);
+          
+          // Add new todo to the list (if you're planning to display it)
+          setData([...data, response.data]);
+          toast.success("Todo added successfully..");    
+          // Clear the form
+          setFormdata({
+            title: '',
+            description: ''
+          });
+        } catch (error) {
+          console.error("Error submitting todo:", error);
+          toast.error("something went wrong !!"); 
+        }
+      }
+    };
+    
+    
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="w-fit max-w-md border-2 border-blue-400 rounded-xl shadow-md p-6 bg-white">
