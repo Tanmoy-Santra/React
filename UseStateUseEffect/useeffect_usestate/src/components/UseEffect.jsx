@@ -9,12 +9,21 @@ const UseEffect = () => {
         }, 1000);
 
         // Cleanup the timer on component unmount
-        return () => clearTimeout(timer);
+        return () => {
+            clearTimeout(timer);
+            console.log('Timer cleared');
+            
+        };
     }, [count]);
+
+    const toggleHandler = () => {
+        setCount(0);
+    };
 
     return (
         <div>
             <h1>Hi, I am counter {count}</h1>
+            <button onClick={toggleHandler}>toggle</button>
         </div>
     );
 }
