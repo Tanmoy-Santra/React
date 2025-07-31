@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <button onClick={()=>dispatch(incrementByAmount(7))}>increment by ammount</button>
+      <button onClick={()=>dispatch(incrementByAmount(7))}>increment by ammount </button>
       Currently count is {count};
       <button onClick={()=>dispatch(increment())}>+</button>
       <button onClick={()=>dispatch(decrement())}>-</button>
